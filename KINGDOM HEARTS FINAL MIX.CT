@@ -5,7 +5,7 @@
       <ID>71</ID>
       <Description>"PointerInfo"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="7FF754710800"/>
+      <LastState Value="" RealAddress="00000000"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>pointerinfo</Address>
@@ -80,7 +80,7 @@ db 48 8B C4 57 48 83 EC 60
           <ID>67</ID>
           <Description>"ShortToLong"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="7FF754710800"/>
+          <LastState Value="" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+0</Address>
@@ -107,7 +107,7 @@ db 48 8B C4 57 48 83 EC 60
           <ID>68</ID>
           <Description>"LongToShort"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="7FF75471080C"/>
+          <LastState Value="" RealAddress="0000000C"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+C</Address>
@@ -136,7 +136,7 @@ db 48 8B C4 57 48 83 EC 60
       <ID>123</ID>
       <Description>"Script Info"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" Activated="1" RealAddress="7FF754720800"/>
+      <LastState Value="" Activated="1" RealAddress="7FF794070800"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>scriptinfo</Address>
@@ -149,7 +149,7 @@ db 48 8B C4 57 48 83 EC 60
           <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
 alloc(newmem,2048,"KINGDOM HEARTS FINAL MIX.exe"+295E78)
-alloc(scriptinfo,12,"KINGDOM HEARTS FINAL MIX.exe"+295E78)
+alloc(scriptinfo,32,"KINGDOM HEARTS FINAL MIX.exe"+295E78)
 registersymbol(scriptinfo)
 label(returnhere)
 label(originalcode)
@@ -158,14 +158,34 @@ label(exit)
 newmem: //this is allocated memory, you have read,write,execute access
 //place your code here
 push rax
+push rbx
 push rcx
+push rdx
 mov ecx, 360
 mov eax, [scriptinfo]
 imul ecx
 lea rcx, ["KINGDOM HEARTS FINAL MIX.exe"+2398DA0]
 add rax, rcx
 mov [scriptinfo+4], rax
+mov rbx, [rax+80]
+mov eax, [scriptinfo+C]
+mov ecx, 4
+imul ecx
+add rax,rbx
+mov [scriptinfo+14],rax
+mov rbx, rax
+xor rax, rax
+mov al, [rbx+3]
+mov ecx, 8
+imul ecx
+mov ecx, 004E6A90
+add rax, rcx
+lea rcx, ["KINGDOM HEARTS FINAL MIX.exe"]
+add rax, rcx
+mov [scriptinfo+1C], rax
+pop rdx
 pop rcx
+pop rbx
 pop rax
 
 originalcode:
@@ -276,13 +296,74 @@ db 48 89 3D 71 47 AC 02
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
+        <CheatEntry>
+          <ID>135</ID>
+          <Description>"InstructionID"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>+C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>140</ID>
+          <Description>"InstructionInfo"</Description>
+          <Options moHideChildren="1"/>
+          <LastState Value="" Activated="1" RealAddress="7FF794070800"/>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address>+0</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>137</ID>
+              <Description>"Instruction"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" Activated="1" RealAddress="00000000"/>
+              <ShowAsSigned>0</ShowAsSigned>
+              <GroupHeader>1</GroupHeader>
+              <Address>+14</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>136</ID>
+                  <Description>"Parameter1"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>3</ByteLength>
+                  <Address>+0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>138</ID>
+                  <Description>"FunctionID"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Byte</VariableType>
+                  <Address>+3</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>139</ID>
+              <Description>"FunctionPointer"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>8 Bytes</VariableType>
+              <Address>+1C</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
       <ID>74</ID>
       <Description>"EntityInfo"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" Activated="1" RealAddress="7FF754710880"/>
+      <LastState Value="" RealAddress="7FF794060880"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>entityinfo</Address>
@@ -290,7 +371,7 @@ db 48 89 3D 71 47 AC 02
         <CheatEntry>
           <ID>85</ID>
           <Description>"EntityInfo"</Description>
-          <LastState Activated="1"/>
+          <LastState/>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
@@ -904,7 +985,7 @@ db E8 F6 FB FC FF
       <ID>24</ID>
       <Description>"Sora StatPage"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="7FF75748D610"/>
+      <LastState Value="" RealAddress="7FF796DDD610"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>KINGDOM HEARTS FINAL MIX.exe+2D5D610</Address>
@@ -1079,7 +1160,7 @@ db E8 F6 FB FC FF
       <ID>30</ID>
       <Description>"Room Info"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
