@@ -5,7 +5,6 @@
       <ID>71</ID>
       <Description>"PointerInfo"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="00000000"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>pointerinfo</Address>
@@ -13,7 +12,6 @@
         <CheatEntry>
           <ID>72</ID>
           <Description>"PointerInfo"</Description>
-          <LastState/>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
@@ -80,7 +78,6 @@ db 48 8B C4 57 48 83 EC 60
           <ID>67</ID>
           <Description>"ShortToLong"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+0</Address>
@@ -107,7 +104,6 @@ db 48 8B C4 57 48 83 EC 60
           <ID>68</ID>
           <Description>"LongToShort"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="0000000C"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+C</Address>
@@ -136,7 +132,6 @@ db 48 8B C4 57 48 83 EC 60
       <ID>123</ID>
       <Description>"Script Info"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" Activated="1" RealAddress="7FF794070800"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>scriptinfo</Address>
@@ -144,7 +139,6 @@ db 48 8B C4 57 48 83 EC 60
         <CheatEntry>
           <ID>125</ID>
           <Description>"ScriptInfo"</Description>
-          <LastState Activated="1"/>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
@@ -230,7 +224,6 @@ db 48 89 3D 71 47 AC 02
           <ID>128</ID>
           <Description>"Script"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" Activated="1" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+4</Address>
@@ -240,7 +233,7 @@ db 48 89 3D 71 47 AC 02
           <CheatEntries>
             <CheatEntry>
               <ID>77</ID>
-              <Description>"ScriptID"</Description>
+              <Description>"ScriptIDCode"</Description>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
@@ -264,7 +257,23 @@ db 48 89 3D 71 47 AC 02
             </CheatEntry>
             <CheatEntry>
               <ID>134</ID>
-              <Description>"ReactInstruction"</Description>
+              <Description>"ExamineInstruction"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+9C</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>142</ID>
+              <Description>"OnHitInstruction"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+A0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>141</ID>
+              <Description>"TalkInstruction"</Description>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
@@ -287,12 +296,44 @@ db 48 89 3D 71 47 AC 02
               <Address>+AC</Address>
             </CheatEntry>
             <CheatEntry>
+              <ID>145</ID>
+              <Description>"NearbyInstruction"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+B4</Address>
+            </CheatEntry>
+            <CheatEntry>
               <ID>130</ID>
               <Description>"CurrentInstruction"</Description>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
               <Address>+190</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>143</ID>
+              <Description>"StackSelection"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+194</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>144</ID>
+              <Description>"StackBase"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+198</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>147</ID>
+              <Description>"UnknownInt"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+33C</Address>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -308,7 +349,6 @@ db 48 89 3D 71 47 AC 02
           <ID>140</ID>
           <Description>"InstructionInfo"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" Activated="1" RealAddress="7FF794070800"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+0</Address>
@@ -317,7 +357,6 @@ db 48 89 3D 71 47 AC 02
               <ID>137</ID>
               <Description>"Instruction"</Description>
               <Options moHideChildren="1"/>
-              <LastState Value="" Activated="1" RealAddress="00000000"/>
               <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
               <Address>+14</Address>
@@ -363,7 +402,6 @@ db 48 89 3D 71 47 AC 02
       <ID>74</ID>
       <Description>"EntityInfo"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="7FF794060880"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>entityinfo</Address>
@@ -371,13 +409,12 @@ db 48 89 3D 71 47 AC 02
         <CheatEntry>
           <ID>85</ID>
           <Description>"EntityInfo"</Description>
-          <LastState/>
           <VariableType>Auto Assembler Script</VariableType>
           <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
 alloc(newmem,2048,"KINGDOM HEARTS FINAL MIX.exe"+295E60)
 alloc(fourtoeight, 128,"KINGDOM HEARTS FINAL MIX.exe"+295E60)
-alloc(entityinfo,32,"KINGDOM HEARTS FINAL MIX.exe"+295E60)
+alloc(entityinfo,256,"KINGDOM HEARTS FINAL MIX.exe"+295E60)
 registersymbol(entityinfo)
 label(returnhere)
 label(originalcode)
@@ -398,7 +435,7 @@ push rax
 push rcx
 push rdx
 xor rdx,rdx
-lea rcx, ["KINGDOM HEARTS FINAL MIX.exe"+2D37C80]
+lea rcx, ["KINGDOM HEARTS FINAL MIX.exe"+2D37CA0]
 mov rax, ["KINGDOM HEARTS FINAL MIX.exe"+2D37C98]
 sub rax,rcx
 mov ecx, 4B0
@@ -423,6 +460,9 @@ mov [entityinfo+20],rax
 mov eax,[rdx+64]
 call fourtoeight
 mov [entityinfo+28],rax
+mov eax,[rdx+8]
+call fourtoeight
+mov [entityinfo+30],rax
 pop rdx
 pop rcx
 pop rax
@@ -472,7 +512,6 @@ db 48 8B D9 48 89 68 10
           <ID>76</ID>
           <Description>"Entity"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" Activated="1" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+8</Address>
@@ -482,7 +521,7 @@ db 48 8B D9 48 89 68 10
           <CheatEntries>
             <CheatEntry>
               <ID>127</ID>
-              <Description>"ScriptID"</Description>
+              <Description>"ScriptIDCode"</Description>
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>4 Bytes</VariableType>
@@ -587,7 +626,6 @@ db 48 8B D9 48 89 68 10
           <ID>94</ID>
           <Description>"StatPage"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+10</Address>
@@ -641,7 +679,6 @@ db 48 8B D9 48 89 68 10
               <ID>101</ID>
               <Description>"PartyStatPage"</Description>
               <Options moHideChildren="1"/>
-              <LastState Value="" RealAddress="00000000"/>
               <ShowAsSigned>0</ShowAsSigned>
               <GroupHeader>1</GroupHeader>
               <Address>+C8</Address>
@@ -766,7 +803,6 @@ db 48 8B D9 48 89 68 10
           <ID>119</ID>
           <Description>"Actor"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" Activated="1" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+18</Address>
@@ -776,6 +812,14 @@ db 48 8B D9 48 89 68 10
           <CheatEntries>
             <CheatEntry>
               <ID>118</ID>
+              <Description>"ScriptIDCode"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>146</ID>
               <Description>"Name"</Description>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
@@ -815,12 +859,54 @@ db 48 8B D9 48 89 68 10
             <Offset>0</Offset>
           </Offsets>
         </CheatEntry>
+        <CheatEntry>
+          <ID>149</ID>
+          <Description>"MOBJ"</Description>
+          <Options moHideChildren="1"/>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <GroupHeader>1</GroupHeader>
+          <Address>+30</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>148</ID>
+              <Description>"Counter"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+0</Address>
+              <Offsets>
+                <Offset>0</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>150</ID>
+              <Description>"UnknownHeaderSP"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+0</Address>
+              <Offsets>
+                <Offset>88</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>151</ID>
+              <Description>"UnknownBodySP"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>+0</Address>
+              <Offsets>
+                <Offset>90</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
       <ID>63</ID>
       <Description>"WarpOnUnpause"</Description>
-      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
@@ -850,6 +936,7 @@ add rcx,40
 jmp warploop
 warpend:
 shr rcx,6
+mov ["KINGDOM HEARTS FINAL MIX.exe"+232E908],ecx
 
 call "KINGDOM HEARTS FINAL MIX.exe"+17B450
 
@@ -886,7 +973,6 @@ db E8 F6 FB FC FF
       <ID>56</ID>
       <Description>"Sora Entity"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="00000000"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>KINGDOM HEARTS FINAL MIX.exe+2D37C80</Address>
@@ -985,7 +1071,6 @@ db E8 F6 FB FC FF
       <ID>24</ID>
       <Description>"Sora StatPage"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="7FF796DDD610"/>
       <ShowAsSigned>0</ShowAsSigned>
       <GroupHeader>1</GroupHeader>
       <Address>KINGDOM HEARTS FINAL MIX.exe+2D5D610</Address>
@@ -1036,7 +1121,6 @@ db E8 F6 FB FC FF
           <ID>15</ID>
           <Description>"PartyStatPage"</Description>
           <Options moHideChildren="1"/>
-          <LastState Value="" RealAddress="00000000"/>
           <ShowAsSigned>0</ShowAsSigned>
           <GroupHeader>1</GroupHeader>
           <Address>+C8</Address>
@@ -1160,7 +1244,6 @@ db E8 F6 FB FC FF
       <ID>30</ID>
       <Description>"Room Info"</Description>
       <Options moHideChildren="1"/>
-      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
@@ -1198,6 +1281,21 @@ db E8 F6 FB FC FF
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>8 Bytes</VariableType>
       <Address>KINGDOM HEARTS FINAL MIX.exe+2538870</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>152</ID>
+      <Description>"Munny"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"KINGDOM HEARTS FINAL MIX.exe"+2E0017C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>154</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>Array of byte</VariableType>
+      <ByteLength>11</ByteLength>
+      <Address>"KINGDOM HEARTS FINAL MIX.exe"+5019B5</Address>
     </CheatEntry>
   </CheatEntries>
   <UserdefinedSymbols/>
